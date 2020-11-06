@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<div class="bs-example">
+		<nav style="margin-top: 20px" class="nav nav-tabs fixed-top">
+			<a href="/" class="nav-item nav-link active">
+				<i class="fa fa-home"></i> Home
+			</a>
+			<a href="indexx" class="nav-item nav-link">
+				<i class=""></i> Anime
+			</a>
+			<a href="/movie" class="nav-item nav-link">
+				<i class=""></i> Movies
+			</a>
+			<a href="/manga" class="nav-item nav-link" tabindex="-1">
+				<i class=""></i> Manga
+			</a>
+			<a  style="margin-left: 872px; margin-bottom: 8px; inline-block" href="keluar" class="btn btn-danger">logout
+			</a>	
+		</nav>
+
+		<div style="margin-top: 100px;">
+			<h1 style="text-align: center;">Selamat Datang</h1>
+			{% if user.is_authenticated %}
+			<h3 style="text-align: center;">Halo {{ user }}</h3>
+			{% endif %}
+		</div>
+	</div>
+	
+{% endblock %}

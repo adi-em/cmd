@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+        <div class="container px-lg-5"> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <h1 class="text-center">DETAIL</h1><br>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-left: 310px;" class="bs-example">
+                <div class="card" style="width: 25rem;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Judul : {{data.judul}}</li>
+                        <li class="list-group-item">Tahun : {{data.rilis}}</li>
+                        <li class="list-group-item">Genre : {{data.genre_id}}</li>
+                        <li class="list-group-item">Pengarang : {{data.pengarang}}</li>
+                        <li class="list-group-item">Format : {{data.formatM}}</li>
+                        <li class="list-group-item">Status : {{data.status}}</li>
+                        <li class="list-group-item">Cara Baca : {{data.baca}}</li>
+                        <li class="list-group-item">Description : {{data.description}}</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="/manga" style="margin-left: 280px;" class="btn btn-danger" class="card-link">Back</a>
+                    </div>
+                </div>
+            </div>
+                                
+ {% endblock %}

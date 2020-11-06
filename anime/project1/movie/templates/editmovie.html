@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div style="margin-left: 500px;" class="container">
+    <div class="row">
+        <div class="col-md-4">
+
+            {% for messages in messages %}
+                {% if messages %}
+                    <div class="alert alert-success">{{ messages }}</div>
+                {% endif %}
+            {% endfor %}
+
+            <form action="{% url 'editmovie' juduls.id %}" method="post">
+                {% csrf_token %}
+
+                {{ form.as_p }}
+            
+                <button class="btn btn-primary">Simpan</button>
+                <a href="/movie" class="btn btn-danger">kembali</a>
+            
+            </form>
+        </div>
+    </div>
+</div>
+    
+
+{% endblock %}
